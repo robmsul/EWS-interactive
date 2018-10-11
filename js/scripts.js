@@ -30,5 +30,13 @@ function showSlides(n) {
 }
 
 $( function() {
-    $( "#tabs" ).tabs();
+    $( "#tab1" ).tabs();
+    $( "#tab2" ).tabs();
+    $( "#tab3" ).tabs();
+    $( "#tab4" ).tabs();
+    $( "#tab5" ).tabs();
+    $( "#tab6" ).tabs();
+    $( "#tab7" ).tabs();
+    $( "#tab8" ).tabs();
+    $( "#tab9" ).tabs();
   } );
