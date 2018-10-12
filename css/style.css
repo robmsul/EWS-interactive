@@ -6,6 +6,7 @@
   position: relative;
   margin: auto;
   box-shadow: 2px 3px 8px rgba(68,68,68,0.8);
+  margin-bottom: 40px;
 }
 
 /* Hide the images by default */
@@ -17,7 +18,7 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -95,12 +96,17 @@
 }
 
 /* Site-wide*/
+
+body {
+  background-color: #eee;
+}
 h1 {
     font-family: 'Fjalla One', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     line-height: 46px;
     font-size: 43px;
+    text-align: center;
     }
 h2 {
     font-family: 'Cantarell', sans-serif;
@@ -115,7 +121,23 @@ p {
     font-size: 17px;
     line-height: 23px;
     }
+    
+
+a {
+  text-decoration: none;
+  color: #167ac6;
+  font-family: 'Cantarell', sans-serif;
+}
+
+a:hover {
+  color: #FFA236;
+}
 /* Styling the slide layout */
+
+.slideshow-container {
+  background-color: white;
+}
+
 
 .rnd-slide {
     display: flex;
@@ -155,7 +177,7 @@ p {
 .topnav {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
@@ -186,8 +208,17 @@ p {
 .rnd-results {
   margin-top: 15px;
 }
+
+
+.full-results {
+  text-align: left;
+  margin: 0px 0px 10px 10px;
+  
+}
+
 .result-tabs {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -224,6 +255,34 @@ td, th {
     padding: 8px;
 }
 
+.footer {
+  background-color: #333333;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+
+.footer div {
+  width: 100px;
+  text-align: center;
+  margin: auto 5px;
+}
+
+.footer a {
+  color: #FFA236;
+}
+
+.footer a:hover {
+  color: #167ac6;
+}
+
+.padded {
+  padding: 15px 20px 25px 20px;
+}
+
 /* Responsive iFrame */
 .resp-container {
     position: relative;
@@ -256,6 +315,8 @@ td, th {
 a {
 	border: none !important;
 }
+
+
 
 /* QUIZ STYLE */
 
@@ -366,4 +427,32 @@ a {
 
 .answers li {
   box-shadow: 2px 2px 4px rgba(68,68,68,0.4);
+}
+
+/* Responsive styling */
+@media screen and (max-width:800px){
+    .topbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .topbar img {
+      position: relative;
+      margin: 5px 25px -20px 0px;
+    }
+    
+    .dot {
+      height: 28px;
+      width: 28px;
+      margin: 10px 5px 0px 5px;
+    }
+}
+
+@media screen and (max-width:411px){
+    .dot {
+      height: 40px;
+      width: 40px;
+      margin: 10px 10px 0px 10px;
+    }
 }
