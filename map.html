@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>EWS 2018 Interactive | Event Map</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Explore all 8 2018 EWS round venues across the globe on this interactive map."/>
+        <meta name="keywords" content="EWS, enduro world series, enduro, 2018, event, map, mountain bike"/>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link href="http://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700" rel="stylesheet" type="text/css" />
+        
+    </head>
+    
+    <body>
+        <div class="header">
+            <div class="topbar"> 
+                <div><a href="index.html"><img src="images/ews-logo.png" height="50px"></a>
+                </div>
+                <div>
+                <h1>EWS 2018 Interactive</h1>
+                </div>
+            </div>
+            <div class="topnav">
+                
+                <a href="index.html"  class="menu-item">
+                    <div >Results</div>
+                </a>
+                <a href="map.html"  class="menu-item current">
+                    <div >Map</div>
+                </a>
+                <a href="quiz.html"  class="menu-item">
+                    <div >Quiz</div>
+                </a>
+            </div>
+        </div>
+        <div class="slideshow-container" id="mapContainer">
+            <h1>2018 Event Map</h1>
+            <p>Click on the EWS round locations to learn more.</p>
+                <div class="relative">
+                    <img src="images/2018-event-map.jpg" alt="2018 EWS map of all 8 rounds" width="100%">
+                    
+                    <div class="popup" id="puCon1" onclick="puChi()" title="" style="position: absolute; left: 19.9%; top: 66.5%; width: 4.19%; height: 8.24%; z-index: 1;">
+                        <span class="popuptext-above" id="pu1">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>1. Lo Barnechea, Chile <img src="images/flag-chile.png" class="flag"></h1>
+                                <h2>24–25 March 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19974.290303209058!2d-70.3202987407678!3d-33.34991794248428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa43d41927fdba388!2sFarellones!5e0!3m2!1sen!2suk!4v1539528780305" width="315" height="250" frameborder="0" style="border: 0px;" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puCol()" title="" style="position: absolute; left: 17.75%; top: 43%; width: 4.19%; height: 8.24%; z-index: 2;">
+                        <span class="popuptext" id="pu2">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>2. Manizales, Colombia<img src="images/flag-colombia.png" class="flag"></h1>
+                                <h2> 31 March – 1 April 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d254349.82803383708!2d-75.483643!3d5.068698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476ffa6a42ce3b%3A0xa863cf6423ea141c!2sManizales%2C+Caldas%2C+Colombia!5e0!3m2!1sen!2suk!4v1539536785104" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puFra()" title="" style="position: absolute; left: 42.49%; top: 7.3%; width: 4.19%; height: 8.24%; z-index: 2;">
+                        <span class="popuptext" id="pu3">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>3. Montagnes du<br>Caroux, France<img src="images/flag-france.png" class="flag"></h1>
+                                <h2>12–13 May 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92553.28070953947!2d2.9172590000000005!3d43.537996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b190c0ab5bdafd%3A0x4078821166ac360!2s34390+Olargues%2C+France!5e0!3m2!1sen!2suk!4v1539537224739" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puSlo()" title="" style="position: absolute; left: 54.1%; top: 15.6%; width: 4.19%; height: 8.24%; z-index: 2;">
+                        <span class="popuptext" id="pu4">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>4. Petzen - Jamnica,<br>Austria/Slovenia<img src="images/flag-slovenia.png" class="flag"></h1>
+                                <h2>30 June – 1 July 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d351278.2997679719!2d14.774096!3d46.540531!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc3d265a7c1ea92e0!2sPetzen-Bergbahnen+GmbH!5e0!3m2!1sen!2suk!4v1539537597571" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puIta()" title="" style="position: absolute; left: 47.9%; top: 5.6%; width: 4.19%; height: 8.24%; z-index: 2;">
+                        <span class="popuptext" id="pu5">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>5. La Thuile, Italy<img src="images/flag-italy.png" class="flag"></h1>
+                                <h2>21–22 July 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d44587.4042626543!2d6.918499!3d45.696736!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47896aae7e74d779%3A0x1c05e68093b74390!2s11016+La+Thuile%2C+Aosta+Valley%2C+Italy!5e0!3m2!1sen!2suk!4v1539537822715" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puCan()" title="" style="position: absolute; left: 9.9%; top: 21.4%; width: 4.19%; height: 8.24%; z-index: 6;">
+                        <span class="popuptext" id="pu6">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>6. Whistler, Canada<img src="images/flag-canada.png" class="flag"></h1>
+                                <h2>12 August 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d163778.93701449953!2d-123.001515!3d50.104148!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54873cb203957b87%3A0x4ab741e875f5cff6!2sWhistler%2C+BC%2C+Canada!5e0!3m2!1sen!2suk!4v1539537958607" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puSpa()" title="" style="position: absolute; left: 38.8%; top: 19.3%; width: 4.19%; height: 8.36%; z-index: 2;">
+                        <span class="popuptext" id="pu7">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>7. Ainsa - Sobrarbe, Spain<img src="images/flag-spain.png" class="flag"></h1>
+                                <h2>22–23 September 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23580.024202601893!2d0.14326000000000647!3d42.41469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a7f1407f2ea311%3A0x4018c6508cea650!2sA%C3%ADnsa-Sobrarbe%2C+Huesca%2C+Spain!5e0!3m2!1sen!2suk!4v1539538081805" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    <div class="popup" onclick="puIta2()" title="" style="position: absolute; left: 49.95%; top: 29.8%; width: 4.19%; height: 8.24%; z-index: 2;">
+                        <span class="popuptext" id="pu8">
+                            <div class="popup-content">
+                                <img src="images/exit-button.png" height="35px" width="35px" class="popup-exit"</div>
+                                <h1>8. Finale Ligure, Italy<img src="images/flag-italy.png" class="flag"></h1>
+                                <h2>29 September 2018</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d163160.65814988894!2d8.332471495275561!3d44.174345142096655!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d2fa2f779a7221%3A0xf64560ab17a5f16!2s17024+Finale+Ligure%2C+Province+of+Savona%2C+Italy!5e0!3m2!1sen!2suk!4v1539538242609" width="315" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                
+        </div>
+        
+        <div class="footer">
+            <div>
+                <a href="credits.html">Credits</a>
+            </div>
+            <div>
+                <p>Site design by <a href="http://rsulaski.com/"><br />Rob Sulaski</a></p>
+            </div>
+            <div>
+                <a href="http://www.enduroworldseries.com/" target="_blank"><img src="images/ews-logo.png" height="30px"></a>
+            </div>
+        </div>
+        
+    <script src="js/scripts.js"></script>
+    </body>
+    
+</html>

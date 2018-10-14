@@ -1,5 +1,49 @@
 console.log('scripts loaded');
 
+
+// POPUPS on MAP
+function puChi() {
+    var popup = document.getElementById("pu1");
+    popup.classList.toggle("show");
+}
+
+function puCol() {
+    var popup = document.getElementById("pu2");
+    popup.classList.toggle("show");
+}
+
+function puFra() {
+    var popup = document.getElementById("pu3");
+    popup.classList.toggle("show");
+}
+
+function puSlo() {
+    var popup = document.getElementById("pu4");
+    popup.classList.toggle("show");
+}
+
+function puIta() {
+    var popup = document.getElementById("pu5");
+    popup.classList.toggle("show");
+}
+
+function puCan() {
+    var popup = document.getElementById("pu6");
+    popup.classList.toggle("show");
+}
+
+function puSpa() {
+    var popup = document.getElementById("pu7");
+    popup.classList.toggle("show");
+}
+
+function puIta2() {
+    var popup = document.getElementById("pu8");
+    popup.classList.toggle("show");
+}
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -27,8 +71,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
-}
+};
 
+// TABS
 $( function() {
     $( "#tab1" ).tabs();
     $( "#tab2" ).tabs();
@@ -40,3 +85,6 @@ $( function() {
     $( "#tab8" ).tabs();
     $( "#tab9" ).tabs();
   } );
+
+
+

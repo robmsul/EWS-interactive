@@ -17,13 +17,13 @@
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  bottom: 50%;
+  position: fixed;
+  bottom: 10%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
   color: white;
-  background-color: rgba(68,68,68,0.2);
+  background-color: rgba(68,68,68,0.4);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -34,6 +34,10 @@
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  margin-left: -8px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -71,6 +75,10 @@
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+.on {
+  background-color: #717171;
 }
 
 .active, .dot:hover {
@@ -132,6 +140,10 @@ a {
 a:hover {
   color: #FFA236;
 }
+
+:focus {
+  outline: none;
+}
 /* Styling the slide layout */
 
 .slideshow-container {
@@ -140,14 +152,13 @@ a:hover {
 
 
 .rnd-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
 }
 
 .rnd-title h2 {
     color: #FFA236;
+    text-align: center;
 }
 
 .header {
@@ -209,6 +220,9 @@ a:hover {
   margin-top: 15px;
 }
 
+.rnd-results h2 {
+  text-align: center;
+}
 
 .full-results {
   text-align: left;
@@ -279,10 +293,20 @@ td, th {
   color: #167ac6;
 }
 
+.footer p {
+    font-size: 16px;
+    line-height: 20px;
+    }
+
 .padded {
   padding: 15px 20px 25px 20px;
 }
 
+.slide-dots {
+      text-align:center;
+    }
+    
+    
 /* Responsive iFrame */
 .resp-container {
     position: relative;
@@ -429,7 +453,116 @@ a {
   box-shadow: 2px 2px 4px rgba(68,68,68,0.4);
 }
 
+
+/* Event Map */
+    #mapContainer {
+      padding: 5px 3px 0px 3px;
+      text-align: center;
+    }
+    
+    .relative {
+      position: relative;
+    }
+    /* Popup container */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius: 50%;
+        margin-left: 2px;
+    }
+    
+    .popup-content h1 {
+      margin: 5px auto 0px auto;
+      font-size: 22px;
+      line-height: 25px;
+    }
+    
+    .flag {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+    }
+    
+    .popup-exit {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+    }
+
+    .popup-content h2 {
+      margin: 0px auto 3px auto;
+      font-size: 15px;
+      color: #FFA236;
+    }
+    
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 315px;
+        background-color: rgba(51, 51, 51, 0.85);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        top: 125%;
+        z-index: 1;
+        left: 51%;
+        margin-left: -80px;
+    }
+    
+    .popup .popuptext-above {
+        visibility: hidden;
+        width: 315px;
+        background-color: rgba(51, 51, 51, 0.85);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 1;
+        left: 51%;
+        margin-left: -80px;
+        height: 325px;
+    }
+    
+    
+ /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+    
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+    }
+    
+    
 /* Responsive styling */
+@media screen and (max-width:1030px){
+    .prev {
+      margin-left: 0px;
+    }
+    
+    .next {
+      margin-right: 8px;
+    }
+}
+
 @media screen and (max-width:800px){
     .topbar {
       display: flex;
@@ -446,13 +579,77 @@ a {
       height: 28px;
       width: 28px;
       margin: 10px 5px 0px 5px;
+      
     }
-}
+    
+    .rnd-title {
+      margin: -6px 0px;
+      line-height: 10px;
+      margin: 0px 5px;
+    }
+    
+    .rnd-title h2 {
+      margin-top: -15px;
+    }
+    
 
-@media screen and (max-width:411px){
+    
+  @supports (grid-area:auto) { /*ensures CSS Grid is supported by browser*/
+    .rnd-title {
+      grid-row: 1/2;
+    }
+    
+    .resp-container {
+      grid-row: 2/3;
+    }
+    
+    .slide-dots {
+      grid-row: 3/4; 
+    }
+    .rnd-text {
+      grid-row: 4/5;
+    }
+  }
+    
+  .popup .popuptext {
+        position: fixed;
+        top: 20%;
+        left: 25%;
+        
+    }
+    
+    .popup .popuptext-above {
+        position: fixed;
+        top: 20%;
+        left: 25%;
+    } 
+}
+    
+    
+@media screen and (max-width:440px){
     .dot {
       height: 40px;
       width: 40px;
       margin: 10px 10px 0px 10px;
+    }
+    
+    h1 {
+        line-height: 46px;
+        font-size: 30px;
+        }
+    h2 {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: -1px;
+        }
+    .menu-item {
+      width: 90px;
+      font-size: 17px;
+    }
+    
+    .tab-content {
+      margin-left: -10px;
+      margin-right: -10px;
     }
 }
