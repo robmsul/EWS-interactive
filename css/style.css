@@ -592,6 +592,13 @@ a {
       margin-top: -15px;
     }
     
+    .popup {
+        height: 14% !important;
+        width: 7% !important;
+        margin-left: -3px;
+        margin-top: -7px;
+    }
+    
 
     
   @supports (grid-area:auto) { /*ensures CSS Grid is supported by browser*/
